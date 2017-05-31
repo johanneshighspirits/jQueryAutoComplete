@@ -4,27 +4,31 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="autoComplete.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script type="text/javascript">
-  var siteRoot = "http://www.travellink.se";
-  var lang = "SE";
+  var siteRoot = "http://your/domain/here";
+  var lang = "SE"; // Change this if necessary
   </script>
-  <script type="text/javascript" src="/followyourheart/js/autoComplete.js"></script>
+  <script type="text/javascript" src="autoComplete.js"></script>
 </head>
 <body>
 
-<form id="searchForm" class="searchContainer" method="post" action="#">
-  <div class="searchBarContainer expandWidth">
-    <input id="searchFieldSuggestion" class="searchField" type="text" placeholder="" autocomplete="off">
-    <input id="searchField" class="searchField fadeIn delay0" type="text" autofocus autocomplete="off">
-    <a id="searchFieldSubmit" class="submit fadeIn delay1" href=""></a>
+<div class="wrapper">
+  <div class="content">
+    <form id="searchForm" class="searchContainer" method="post" action="#">
+      <div class="searchBarContainer expandWidth">
+        <input id="searchFieldSuggestion" class="searchField" type="text" placeholder="" autocomplete="off">
+        <input id="searchField" class="searchField fadeIn delay0" type="text" autofocus autocomplete="off">
+        <a id="searchFieldSubmit" class="submit fadeIn delay1" href=""></a>
+      </div>
+      <input type="submit" value="SEARCH">
+      <ul id="searchSuggestions"></ul>
+    </form>
   </div>
-  <input type="submit" value="SEARCH">
-  <ul id="searchSuggestions"></ul>
-</form>
-  
+</div>
+
 </body>
 </html>

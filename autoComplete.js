@@ -111,8 +111,6 @@ $(document).ready(function() {
         $("#searchFieldSubmit").attr("href", href);
         $('#suggestion-' + highlightedSuggestion).addClass("highlighted");
       }, 'json');
-
-
     }else{
       $("#searchSuggestions").html('');
     }

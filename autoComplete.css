@@ -1,0 +1,139 @@
+html, body {
+  height: 100%;
+}
+body {
+  background: #aaa;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  min-height: 100%;
+  margin: 0;
+}
+.content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+/* searchBar */
+.searchContainer {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+}
+.searchBarContainer {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  background: none; /* rgba(255,255,255,0.1); */
+  border-bottom: 3px solid #ff3300;
+  border-radius: 5px 5px 0 0;
+}
+.searchField {
+  font-size: 26px;
+  font-weight: bold;
+  color: #FFF;
+  width: 80%;
+  padding: 0 0 0 0;
+  height: 2em;
+  line-height: 2em;
+  background: none;
+  border: none;
+}
+#searchFieldSuggestion {
+  position: absolute;
+  color: rgba(255,255,255,0.4);
+  z-index: 0;
+}
+#searchField {
+  position: relative;
+  z-index: 99;
+}
+
+#searchField::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.85);
+}
+
+#searchField:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255,255,255,0.85); 
+}
+
+#searchField::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255,255,255,0.85);
+}
+
+#searchField:-ms-input-placeholder {  
+  color: rgba(255,255,255,0.85);
+}
+
+#searchSuggestions {
+    position: absolute;
+    top: 120%;
+    left: 0;
+}
+#searchSuggestions li {
+  padding: 3px 10px;
+}
+#searchSuggestions li:hover {
+  background: #146070;
+  opacity: 1;
+  color:#FFF;
+}
+#searchSuggestions li a {
+  display: block;
+}
+.highlighted {
+  opacity: 1 !important;
+  filter: alpha(opacity=100);
+  background: #338695;
+  background: rgba(255,255,255,0.3);
+}
+input:focus, textarea:focus, select:focus {
+  outline:none;
+}
+a.submit {
+  display: block;
+  background: url("magnifyingGlass.png") no-repeat center center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 12px;
+  right: -2px;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  z-index:999;
+}
+a.submit:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+input[type=submit] {
+  float: left;
+  visibility: hidden;
+}
+/* transitions */
+.submit {
+  -webkit-transition: opacity 100ms ease-in-out;
+          transition: opacity 100ms ease-in-out;
+}

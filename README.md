@@ -8,7 +8,7 @@ For a live preview: [Follow your heart campaign](http://www.travellink-campaign.
 ## How does it work
 As user starts typing, suggestions are presented. Pressing → will accept the suggestion, pressing ↑ or ↓ scrolls through the alternatives and pressing ENTER will submit the form.
 
-Matches are fetched from database and returned as json array of objects. The result can be customized, this example uses:
+Matches are fetched from database and returned as json array of objects. The result can of course be customized. This example uses:
 
 * _language_ to specify what language the results should be in 
 * _friendlyName_ is the suggestion that will be shown
@@ -21,8 +21,7 @@ Result example:
     "url"          : "/path/for/submit/button",
     "friendlyName" : "Aberdeen (South Dakota)",
     "language"     : "SE"
-  },
-  // more reults here...
+  }
 ]
 ```
 
